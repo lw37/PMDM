@@ -33,3 +33,9 @@ if(n1<0 || n1!=0){
 if(n1++<=n2){
     console.log("incrementar en 1 unidad de numero1 no lo hace mayor o igula que numero2 ");
 }
+//5
+var total = 1; 
+for (i=1; i<=15; i++) {
+    total = total * i;
+}
+console.log("factorial de 15 es :",total);

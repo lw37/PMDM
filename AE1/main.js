@@ -8,13 +8,28 @@ let meses = ['Enero', 'Febrero','Marzo','Abril','Mayo','Junio',
 
 
 console.table(meses)
-//3.
+//3
 
 const values = [true, false, 5, "hola", [1,2,3], {age: 2, gender: 'male'}];
 for (let i = 0; i < values.length; i++) {
     
     console.log(typeof values[i]);
 }
+//4
+let n1=5;
+let n2=8;
 
-//4.
+if(n1<n2){
+    console.log("numero1  no es mayor que numero2");
+}
 
+if(n2>0){
+    console.log("numero2 es positivo");
+}
+
+if(n1<0 || n1!=0){
+    console.log("n1 es negativo o distinto de 0. ");
+}
+if(n1++<=n2){
+    console.log("incrementar en 1 unidad de numero1 no lo hace mayor o igula que numero2 ");
+}

@@ -55,3 +55,24 @@ if (esPar(numero) == true) {
 } else {
     console.log(numero + ' es IMPAR');
 }
+//7
+
+function Numero(num) {
+    if(num<0){
+        num=num*-1
+    };
+    return num;
+}
+
+//8
+let cod=prompt("introduce un numero entre 1 - 12","1");
+let bingo = Math.floor(Math.random() * 13);
+do{
+    cod=prompt("introduce un numero entre 1 - 12","1");
+    do{
+        alert("Animo vuelve a intentarlo!")
+        cod=prompt("introduce un numero entre 1 - 12","1");
+        
+    }while(bingo!=cod)
+     alert("Felicidades ,has aceptado!")
+}while(cod>12 || cod <1)

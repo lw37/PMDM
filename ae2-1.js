@@ -1,3 +1,4 @@
+//1A
 const array = ["Ana", 2, "Javi", 5, "Roberto", 7, "Vanessa", 10];
 
 const newarry1 = array.filter(i => {
@@ -5,7 +6,7 @@ const newarry1 = array.filter(i => {
         return i
 }
 )
-
+//1B
 console.log(newarry1);
 
 const newarry2 = array.filter(i => {

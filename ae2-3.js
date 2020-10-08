@@ -12,6 +12,6 @@ function findMinimum(values) {
 
 
 //Comprobación
-const numeros = [21,42,523,543,12,5];
+const numeros = [21, 42, 523, 543, 12, 5];
 
 console.log(findMinimum(numeros));

@@ -16,30 +16,34 @@
         <li id="block4"><a>Paso4</a></li>
         <li><button disabled id="continuar" style="float: right;">Continuar</button></li>
     </ul>
-    <div id="d1" style="display:block;" >
-  
+    <div id="d1" style="display:block;">
+        <form action="">
             <h1>Url del Web</h1>
-            <p>Porfavor introduce el link donde quires enviar , haces un click en un espacio gris y dar continuar</p><br>
+            <p>Porfavor introduce el link donde quires enviar , haces un click en un espacio gris y dar continuar</p>
+            <br>
             Callback Url:<input type="url" name="Callback URL" id="CallU">
-
+        </form>
 
     </div>
     <div id="d2" style="display: none;">
-        <h1>Datos Personales</h1>
-        <p>Porfavor introduce todos los campos</p>
-        <p>Nombre:<input type="text" id="nombre" name="nombre" required placeholder="Wei"></p><br>
+    <h1>Datos Personales</h1>
+    <p>Porfavor introduce todos los campos</p>
+    <form action="">
+        <p>Nombre:<input type="text" id="nombre" name="nombre" required placeholder="Wei"></p>
         Apellido:<input type="text" id="apellido" name="apellido" required placeholder="Luo"><br>
-        Fecha de Nacimiento:<input type="date" required><br>
-        Direccion:<input type="text" id="direccion" name="direccion" placeholder="FloridaUniversitaria"><br>
-        Codigo Postal:<input type="number" id="codPostal" maxlength="5" name="codPostal" min="0" max="99999" placeholder="46460"><br>
-        Provincias:
-        <select name="provincias" id="provincias">
-            <option value="Valencia">Valencia</option>
-            <option value="Alicante">Alicante</option>
-            <option value="Castellon">Castellon</option>
-        </select><br>
-        Municipio<input type="text" style="text-transform:uppercase;" placeholder="Catarroja" 
-            onkeyup="javascript:this.value=this.value.toUpperCase();">
+        Fecha de Nacimiento:<input type="date" id="fechaNacimiento" required><br>
+            Direccion:<input type="text" id="direccion" name="direccion" placeholder="FloridaUniversitaria"><br>
+            Codigo Postal:<input type="number" id="codPostal" maxlength="5" name="codPostal" min="0" max="99999"
+                placeholder="46460"><br>
+            Provincias:
+            <select name="provincias" id="provincias">
+                <option value="Valencia">Valencia</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Castellon">Castellon</option>
+            </select><br>
+            Municipio<input type="text" style="text-transform:uppercase;" placeholder="Catarroja"
+                onkeyup="javascript:this.value=this.value.toUpperCase();">
+    </form>
     </div>
     <script type="text/javascript" src="main.js">
     </script>

@@ -1,0 +1,19 @@
+{
+  "name": "asistente",
+  "version": "1.0.0",
+  "description": "a la recopilación de datos de un",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lw37/PMDM-AE1.git"
+  },
+  "author": "Wei Luo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lw37/PMDM-AE1/issues"
+  },
+  "homepage": "https://github.com/lw37/PMDM-AE1#readme"
+}

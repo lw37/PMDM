@@ -29,7 +29,7 @@ const Continuar = () => {
     const municER = document.getElementById("municipioER")
 
 
-
+    const infor1 = document.getElementById("informacion1");
     const infor = document.getElementById("informacion");
     const name = document.getElementById("nombre");
     const apel = document.getElementById("apellido");
@@ -45,6 +45,7 @@ const Continuar = () => {
         } else {
             nameER.style.display = "none";
         }
+        
     });
     dateNaci.addEventListener("input", () => {
         if (name.value === "") {
@@ -104,7 +105,7 @@ const Continuar = () => {
         }
         if (
             (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) == "none"
-        ){
+        ) {
             btc.disabled = false;
         }
 
@@ -118,6 +119,7 @@ const Continuar = () => {
         pag++;
 
         if (pag == 2) {
+            
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#4CAF50";
             blk3.style.backgroundColor = "#333";
@@ -128,15 +130,30 @@ const Continuar = () => {
             div2.style.display = "block";
             div3.style.display = "none";
             div4.style.display = "none";
+            if (
+                (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) == "none"
+            ) {
+                btc.disabled = false;
+            }
         }
 
         if (pag == 3) {
-            const datos = {
+          const datos = {
                 web: rl.value, nombre: name.value, apellido: apel.value, FechaNacimiento: dateNaci.value, direccion: direc.value,
                 codigoPostal: codPos.value, provincia: prov.value, municipio: munic.value
             };
-            infor.textContent="Web: "+datos.web+" Nombre: "+datos.nombre+" Apellido: "+datos.apellido+" Fecha Nacimiento: "+datos.FechaNacimiento+
-            " Direccion: "+datos.direccion+" Codigo Postal: "+datos.codigoPostal+" Provincia: "+datos.provincia+" Municipio: "+datos.municipio;
+            infor.innerHTML="";
+            infor.innerHTML = infor.innerHTML+ "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
+                "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
+
+
+/*            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
+            datos1.forEach(element =>{
+                const fila =document.createElement("li");
+                fila.appendChild(element);
+                infor1.appendChild(fila);}
+                );*/
+
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#4CAF50";

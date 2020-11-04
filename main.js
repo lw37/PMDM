@@ -116,7 +116,7 @@ const Continuar = () => {
     });
     btc.addEventListener('click', () => {
         pag++;
-        val++;
+
         if (pag == 2) {
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#4CAF50";
@@ -129,42 +129,14 @@ const Continuar = () => {
             div3.style.display = "none";
             div4.style.display = "none";
         }
-        /* if (val === 3) {
-             pag=2;
-             val=1;
- 
-             if (name.value === "") {
-                 pag=2;
-                 val=1;        
-                 if (apel.value === "") {
-                     pag=2;
-                     val=1;            
-                     if (dateNaci.value === "") {
-                         pag=2;
-                         val=1;                   
-                         if (codPos.maxlength !== 5) {
-                             pag=2;
-                             val=1;                                                    
-                             if (prov.value === "") {                            
-                                 pag=2;
-                                 val=1;
-                                 if (munic.value === "") {
-                                     pag=2;
-                                     val=1;
-                                 }
-                             }
-                         }
-                     }
-                 }
-             }
-         }*/
+
         if (pag == 3) {
             const datos = {
                 web: rl.value, nombre: name.value, apellido: apel.value, FechaNacimiento: dateNaci.value, direccion: direc.value,
                 codigoPostal: codPos.value, provincia: prov.value, municipio: munic.value
             };
-            infor.textContent="Web: "+datos.web+"\n Nombre: "+datos.nombre+"\n Apellido: "+datos.apellido+"\n Fecha Nacimiento: "+datos.FechaNacimiento+
-            "\n Direccion: "+datos.direccion+"\n Codigo Postal: "+datos.codigoPostal+"\n Provincia: "+datos.provincia+"\n Municipio: "+datos.municipio;
+            infor.textContent="Web: "+datos.web+" Nombre: "+datos.nombre+" Apellido: "+datos.apellido+" Fecha Nacimiento: "+datos.FechaNacimiento+
+            " Direccion: "+datos.direccion+" Codigo Postal: "+datos.codigoPostal+" Provincia: "+datos.provincia+" Municipio: "+datos.municipio;
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#4CAF50";

@@ -242,8 +242,8 @@ const botonContinuar = () => {
                 "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
 
 
-            /*            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
-                        datos1.forEach(element =>{
+            /*  let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
+                    datos1.forEach(element =>{
                             const fila =document.createElement("li");
                             fila.appendChild(element);
                             infor1.appendChild(fila);}

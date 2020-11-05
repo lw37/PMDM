@@ -274,7 +274,7 @@ const botonContinuar = () => {
         }
     });
 
-    btAcep.addEventListener('click', () => {
+    btTer.addEventListener('click', () => {
         location.replace(rl.value);
     })
 

@@ -40,4 +40,5 @@ button {
 }
 label{
     display: none;
+    color: red;
 }

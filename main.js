@@ -31,7 +31,6 @@ const dateNaciER = document.getElementById("fechaER");
 const codPosER = document.getElementById("codigoER");
 const municER = document.getElementById("municipioER")
 
-const infor1 = document.getElementById("informacion1");
 const infor = document.getElementById("informacion");
 const name = document.getElementById("nombre");
 const apel = document.getElementById("apellido");
@@ -182,7 +181,7 @@ const botonContinuar = () => {
             div2.style.display = "none";
             div3.style.display = "none";
             div4.style.display = "block";
-            btTer=rl.value;
+            
         }
     });
 
@@ -214,17 +213,20 @@ const botonContinuar = () => {
                 web: rl.value, nombre: name.value, apellido: apel.value, FechaNacimiento: dateNaci.value, direccion: direc.value,
                 codigoPostal: codPos.value, provincia: prov.value, municipio: munic.value
             };
-            infor.innerHTML = "";
+            Object.entries(datos).forEach(element =>{
+                var fila =document.createElement("li");
+                var texto=document.createTextNode(element[1]);
+                fila.appendChild(texto);
+                infor.appendChild(fila);}
+                );
+           
+            /* infor.innerHTML = "";
             infor.innerHTML = infor.innerHTML + "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
                 "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
 
-
-            /*            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
-                        datos1.forEach(element =>{
-                            const fila =document.createElement("li");
-                            fila.appendChild(element);
-                            infor1.appendChild(fila);}
-                            );*/
+        
+                let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
+                    */
 
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
@@ -247,7 +249,7 @@ const botonContinuar = () => {
             div2.style.display = "none";
             div3.style.display = "none";
             div4.style.display = "block";
-            btTer=rl.value;
+           
         }
     });
 

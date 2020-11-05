@@ -1,51 +1,56 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    Continuar();
 
+    validaciones();
+    botonContinuar();
+    botonAtras();
 });
-const Continuar = () => {
-    let pag = 1;
-    let val = 1;
-    const blk1 = document.getElementById("block1");
-    blk1.style.backgroundColor = "#4CAF50";
-    const blk2 = document.getElementById("block2");
-    const blk3 = document.getElementById("block3");
-    const blk4 = document.getElementById("block4");
-
-    const btc = document.getElementById("continuar");
-    const bta = document.getElementById("atras");
-    const rl = document.getElementById("CallU");
-
-    const div1 = document.getElementById("d1");
-    const div2 = document.getElementById("d2");
-    const div3 = document.getElementById("d3");
-
-    const div4 = document.getElementById("d4");
-
-    const nameER = document.getElementById("nombreER");
-    const apelER = document.getElementById("apellidoER");
-    const dateNaciER = document.getElementById("fechaER");
-    const codPosER = document.getElementById("codigoER");
-    const municER = document.getElementById("municipioER")
 
 
-    const infor1 = document.getElementById("informacion1");
-    const infor = document.getElementById("informacion");
-    const name = document.getElementById("nombre");
-    const apel = document.getElementById("apellido");
-    const dateNaci = document.getElementById("fechaNacimiento");
-    const direc = document.getElementById("direccion");
-    const codPos = document.getElementById("codPostal");
-    const prov = document.getElementById("provincia");
-    const munic = document.getElementById("municipio");
+let pag = 1;
+const blk1 = document.getElementById("block1");
+blk1.style.backgroundColor = "#4CAF50";
+const blk2 = document.getElementById("block2");
+const blk3 = document.getElementById("block3");
+const blk4 = document.getElementById("block4");
 
+
+const btc = document.getElementById("continuar");
+const bta = document.getElementById("atras");
+const rl = document.getElementById("CallU");
+
+const div1 = document.getElementById("d1");
+const div2 = document.getElementById("d2");
+const div3 = document.getElementById("d3");
+
+const div4 = document.getElementById("d4");
+
+const nameER = document.getElementById("nombreER");
+const apelER = document.getElementById("apellidoER");
+const dateNaciER = document.getElementById("fechaER");
+const codPosER = document.getElementById("codigoER");
+const municER = document.getElementById("municipioER")
+
+
+const infor1 = document.getElementById("informacion1");
+const infor = document.getElementById("informacion");
+const name = document.getElementById("nombre");
+const apel = document.getElementById("apellido");
+const dateNaci = document.getElementById("fechaNacimiento");
+const direc = document.getElementById("direccion");
+const codPos = document.getElementById("codPostal");
+const prov = document.getElementById("provincia");
+const munic = document.getElementById("municipio");
+
+
+const validaciones = () => {
     apel.addEventListener("input", () => {
         if (name.value === "") {
             nameER.style.display = "block";
         } else {
             nameER.style.display = "none";
         }
-        
+
     });
     dateNaci.addEventListener("input", () => {
         if (name.value === "") {
@@ -115,11 +120,15 @@ const Continuar = () => {
             btc.disabled = false;
         }
     });
+}
+
+const botonContinuar = () => {
+
     btc.addEventListener('click', () => {
         pag++;
 
         if (pag == 2) {
-            
+
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#4CAF50";
             blk3.style.backgroundColor = "#333";
@@ -138,21 +147,21 @@ const Continuar = () => {
         }
 
         if (pag == 3) {
-          const datos = {
+            const datos = {
                 web: rl.value, nombre: name.value, apellido: apel.value, FechaNacimiento: dateNaci.value, direccion: direc.value,
                 codigoPostal: codPos.value, provincia: prov.value, municipio: munic.value
             };
-            infor.innerHTML="";
-            infor.innerHTML = infor.innerHTML+ "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
+            infor.innerHTML = "";
+            infor.innerHTML = infor.innerHTML + "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
                 "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
 
 
-/*            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
-            datos1.forEach(element =>{
-                const fila =document.createElement("li");
-                fila.appendChild(element);
-                infor1.appendChild(fila);}
-                );*/
+            /*            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
+                        datos1.forEach(element =>{
+                            const fila =document.createElement("li");
+                            fila.appendChild(element);
+                            infor1.appendChild(fila);}
+                            );*/
 
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
@@ -178,12 +187,8 @@ const Continuar = () => {
     });
 
 
-
-
-
-
-
-
+}
+const botonAtras = () => {
     bta.addEventListener('click', () => {
         pag--;
         if (pag == 3) {

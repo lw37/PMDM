@@ -7,7 +7,6 @@
 </head>
 
 <body id="body">
-
     <ul>
         <li><button id="atras" style="display: none;">Atras</button> </li>
         <li><a id="block1">Paso1</a></li>
@@ -20,7 +19,8 @@
     <div id="d1" style="display:block;">
         <form action="">
             <h1>Url del Web</h1>
-            <p>Porfavor<br> introduce el link donde quires enviar , haces un click en un espacio gris y dar continuar</p>
+            <p>Porfavor<br> introduce el link donde quires enviar , haces un click en un espacio gris y dar continuar
+            </p>
             <br>
             Callback Url:<input type="url" name="Callback URL" id="CallU">
         </form>
@@ -28,27 +28,27 @@
 
     <div id="d2" style="display: none;">
         <h1>Datos Personales</h1>
-        <p>Porfavor introduce todos los campos</p>
+        <p>Porfavor rellena todos los campos que esta marcado*</p>
         <form action="">
-            <p>Nombre:<input type="text" id="nombre" name="nombre" required placeholder="Wei"></p>
-            <label id="nombreER" >introduce tu nombre</label>
-            <p>Apellido:<input type="text" id="apellido" name="apellido" required placeholder="Luo"></p>
+            <p>*Nombre:<input type="text" id="nombre" name="nombre" required placeholder="Wei"></p>
+            <label id="nombreER">introduce tu nombre</label>
+            <p>*Apellido:<input type="text" id="apellido" name="apellido" required placeholder="Luo"></p>
             <label id="apellidoER">introduce tu apellido</label>
-            <p>Fecha de Nacimiento:<input type="date" id="fechaNacimiento" required></p><br>
+            <p>*Fecha de Nacimiento:<input type="date" id="fechaNacimiento" required></p><br>
             <label id="fechaER">introduce tu fecha de nacimiento </label>
             <p>Direccion:<input type="text" id="direccion" name="direccion" placeholder="FloridaUniversitaria"></p>
-            <p>Codigo Postal:<input type="number" id="codPostal" maxlength="5" name="codPostal" min="0" max="99999"
+            <p>*Codigo Postal:<input type="number" id="codPostal" maxlength="5" name="codPostal" min="0" max="99999"
                     placeholder="46460"></p>
             <label id="codigoER">introduce 5 digitos</label>
-            Provincias:
+            *Provincias:
             <select name="provincia" id="provincia" required>
                 <option value="Valencia">Valencia</option>
                 <option value="Alicante">Alicante</option>
                 <option value="Castellon">Castellon</option>
             </select>
-            <p>Municipio<input id="municipio" type="text" style="text-transform:uppercase;" placeholder="Catarroja"></p>
+            <p>*Municipio<input id="municipio" type="text" style="text-transform:uppercase;" placeholder="Catarroja">
+            </p>
             <label id="municipioER">introduce un municipio</label>
-
         </form>
     </div>
 
@@ -62,13 +62,9 @@
     <div id="d4" style="display: none;">
         <h1>Felicidades</h1>
         <p>Has enviado todos los datos</p>
-        <button id="terminar" >Terminar</button>
-
+        <button id="terminar">Terminar</button>
     </div>
-
-
-    <script type="text/javascript" src="main.js">
-    </script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

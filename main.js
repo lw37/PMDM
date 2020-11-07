@@ -1,11 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    validaciones();
-    botonContinuar();
-    botonAtras();
-
-});
-
-
 let pag = 1;
 
 const blk1 = document.getElementById("block1");
@@ -41,6 +33,12 @@ const codPos = document.getElementById("codPostal");
 const prov = document.getElementById("provincia");
 const munic = document.getElementById("municipio");
 
+document.addEventListener('DOMContentLoaded', () => {
+    validaciones();
+    botonContinuar();
+    botonAtras();
+
+});
 
 const validaciones = () => {
     apel.addEventListener("input", () => {
@@ -49,12 +47,10 @@ const validaciones = () => {
         } else {
             nameER.style.display = "none";
         }
-        if (
-            (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) === "none"
-        ) {
+        if (municER.style.display === "none" && codPosER.style.display === "none" && dateNaciER.style.display === "none" && apelER.style.display === "none" && nameER.style.display === "none") {
             btc.disabled = false;
-        }else{
-            btc.disabled=true;
+        } else {
+            btc.disabled = true;
         }
 
     });
@@ -67,38 +63,34 @@ const validaciones = () => {
         if (apel.value === "") {
             apelER.style.display = "block";
         } else {
-            apelER.style.display = "none";
+            apelER.style.display = "";
         }
-        if (
-            (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) === "none"
-        ) {
+        if (municER.style.display === "none" && codPosER.style.display === "none" && dateNaciER.style.display === "none" && apelER.style.display === "none" && nameER.style.display === "none") {
             btc.disabled = false;
-        }else{
-            btc.disabled=true;
+        } else {
+            btc.disabled = true;
         }
     });
     codPos.addEventListener("input", () => {
         if (name.value === "") {
             nameER.style.display = "block";
         } else {
-            nameER.style.display = "none";
+            nameER.style.display = "";
         }
         if (apel.value === "") {
             apelER.style.display = "block";
         } else {
-            apelER.style.display = "none";
+            apelER.style.display = "";
         }
         if (dateNaci.value === "") {
             dateNaciER.style.display = "block";
         } else {
-            dateNaciER.style.display = "none";
+            dateNaciER.style.display = "";
         }
-        if (
-            (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) === "none"
-        ) {
+        if (municER.style.display === "none" && codPosER.style.display === "none" && dateNaciER.style.display === "none" && apelER.style.display === "none" && nameER.style.display === "none") {
             btc.disabled = false;
-        }else{
-            btc.disabled=true;
+        } else {
+            btc.disabled = true;
         }
     });
     munic.addEventListener("input", () => {
@@ -128,14 +120,11 @@ const validaciones = () => {
         } else {
             municER.style.display = "none";
         }
-        if (
-            (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) === "none"
-        ) {
+        if (municER.style.display === "none" && codPosER.style.display === "none" && dateNaciER.style.display === "none" && apelER.style.display === "none" && nameER.style.display === "none") {
             btc.disabled = false;
-        }else{
-            btc.disabled=true;
+        } else {
+            btc.disabled = true;
         }
-
     });
     rl.addEventListener('input', () => {
         if (rl.value !== "") {
@@ -147,9 +136,7 @@ const validaciones = () => {
 const botonContinuar = () => {
     btAcep.addEventListener('click', () => {
         pag++;
-
         if (pag == 2) {
-
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#4CAF50";
             blk3.style.backgroundColor = "#333";
@@ -160,13 +147,7 @@ const botonContinuar = () => {
             div2.style.display = "block";
             div3.style.display = "none";
             div4.style.display = "none";
-            if (
-                (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) == "none"
-            ) {
-                btc.disabled = false;
-            }
         }
-
         if (pag == 3) {
             const datos = {
                 web: rl.value, nombre: name.value, apellido: apel.value, FechaNacimiento: dateNaci.value, direccion: direc.value,
@@ -176,14 +157,6 @@ const botonContinuar = () => {
             infor.innerHTML = infor.innerHTML + "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
                 "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
 
-
-            /*            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
-                        datos1.forEach(element =>{
-                            const fila =document.createElement("li");
-                            fila.appendChild(element);
-                            infor1.appendChild(fila);}
-                            );*/
-
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#4CAF50";
@@ -192,10 +165,8 @@ const botonContinuar = () => {
             div2.style.display = "none";
             div3.style.display = "block";
             div4.style.display = "none";
-
         }
         if (pag == 4) {
-
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#333";
@@ -205,16 +176,12 @@ const botonContinuar = () => {
             div2.style.display = "none";
             div3.style.display = "none";
             div4.style.display = "block";
-
         }
     });
-
 
     btc.addEventListener('click', () => {
         pag++;
-
         if (pag == 2) {
-
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#4CAF50";
             blk3.style.backgroundColor = "#333";
@@ -225,10 +192,10 @@ const botonContinuar = () => {
             div2.style.display = "block";
             div3.style.display = "none";
             div4.style.display = "none";
-            if (
-                (municER.style.display && codPosER.style.display && dateNaciER.style.display && apelER.style.display && nameER.style.display) == "none"
-            ) {
+            if (municER.style.display === "none" && codPosER.style.display === "none" && dateNaciER.style.display === "none" && apelER.style.display === "none" && nameER.style.display === "none") {
                 btc.disabled = false;
+            } else {
+                btc.disabled = true;
             }
         }
 
@@ -237,18 +204,11 @@ const botonContinuar = () => {
                 web: rl.value, nombre: name.value, apellido: apel.value, FechaNacimiento: dateNaci.value, direccion: direc.value,
                 codigoPostal: codPos.value, provincia: prov.value, municipio: munic.value
             };
+
             infor.innerHTML = "";
             infor.innerHTML = infor.innerHTML + "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
                 "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
-
-
-            /*  let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
-                    datos1.forEach(element =>{
-                            const fila =document.createElement("li");
-                            fila.appendChild(element);
-                            infor1.appendChild(fila);}
-                            );*/
-
+            
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#4CAF50";
@@ -257,10 +217,8 @@ const botonContinuar = () => {
             div2.style.display = "none";
             div3.style.display = "block";
             div4.style.display = "none";
-
         }
         if (pag == 4) {
-
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#333";
@@ -270,14 +228,11 @@ const botonContinuar = () => {
             div2.style.display = "none";
             div3.style.display = "none";
             div4.style.display = "block";
-      
         }
     });
-
     btTer.addEventListener('click', () => {
         location.replace(rl.value);
     })
-
 }
 
 const botonAtras = () => {
@@ -306,6 +261,11 @@ const botonAtras = () => {
             div2.style.display = "block";
             div3.style.display = "none";
             div4.style.display = "none";
+            if (municER.style.display === "none" && codPosER.style.display === "none" && dateNaciER.style.display === "none" && apelER.style.display === "none" && nameER.style.display === "none") {
+                btc.disabled = false;
+            } else {
+                btc.disabled = true;
+            }
         }
         if (pag == 1) {
             blk1.style.backgroundColor = "#4CAF50";
@@ -320,7 +280,4 @@ const botonAtras = () => {
             div4.style.display = "none";
         }
     });
-
-
-
 }

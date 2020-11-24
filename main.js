@@ -23,7 +23,7 @@ const dateNaciER = document.getElementById("fechaER");
 const codPosER = document.getElementById("codigoER");
 const municER = document.getElementById("municipioER")
 
-const infor1 = document.getElementById("informacion1");
+
 const infor = document.getElementById("informacion");
 const name = document.getElementById("nombre");
 const apel = document.getElementById("apellido");
@@ -110,6 +110,14 @@ const botonContinuar = () => {
             infor.innerHTML = infor.innerHTML + "Web: " + datos.web + "<br> Nombre: " + datos.nombre + "<br> Apellido: " + datos.apellido + "<br> Fecha Nacimiento: " + datos.FechaNacimiento +
                 "<br> Direccion: " + datos.direccion + "<br> Codigo Postal: " + datos.codigoPostal + "<br> Provincia: " + datos.provincia + "<br> Municipio: " + datos.municipio;
 
+            const ul = document.getElementById("informacion1");
+            let datos1 = [rl.value, name.value, apel.value, dateNaci.value, direc.value, codPos.value, prov.value, munic.value];
+            datos1.forEach(element => {
+                const li = document.createElement("li");
+                li.textContent = element;
+                ul.appendChild(li);
+            }
+            );
             blk1.style.backgroundColor = "#333";
             blk2.style.backgroundColor = "#333";
             blk3.style.backgroundColor = "#4CAF50";

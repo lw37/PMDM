@@ -1,0 +1,36 @@
+.Contenetor {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    border: 2px solid WHITE;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.Contenetor1 {
+    display: flex;
+    flex:1;
+    flex-direction: row;
+}
+
+.Contenetor2 {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+.Contenetor3 {
+    display: flex;
+    flex:1;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.ContenetorV{
+    display: flex;
+    flex:1;
+    padding-left: 1em;
+}
+
+
+.img{
+    height: 250px; width: 250px;
+}

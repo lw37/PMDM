@@ -1,6 +1,6 @@
 .Contenetor {
     display: flex;
-    height: 500px;
+    height: 200px;
     width: 500px;
     border: 2px solid WHITE;
     flex-direction: column;
